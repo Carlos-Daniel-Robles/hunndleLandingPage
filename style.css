@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/**font-family: 'Poppins', sans-serif;/
+/*font-family: 'Open Sans', sans-serif;*/
+
+:root{
+    --violet: hsl(257, 40%, 49%);
+    --softMagneta: hsl(300, 69%, 71%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(images/bg-desktop.svg);
+    background-color: var(--violet);
+}
+
+.principalContainer{
+    width: 1285px;
+    height: auto;
+    margin: auto;
+    margin-top: 60px;
+    display: grid;
+    grid-template-rows: 135px 1fr auto;
+}
+
+.mockup{
+    width: 696px;
+    height: auto;
+}
+
+.contentContainer{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 60px;
+}
+
+.informationContainer{
+    color: white;
+}
+
+.title{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    margin-top: 35px;
+}
+
+.text{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin-top: 25px;
+}
+
+.button{
+    width: 200px;
+    height: 50px;
+    margin-top: 25px;
+    border-radius: 25px;
+    border: none;
+}
+
+.button a{
+    text-decoration: none;
+    color: var(--violet);
+    font-family: 'Open Sans', sans-serif;
+    font-size: medium;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color: var(--softMagneta);
+}
+
+.button a:hover{
+    color: white;
+}
+
+.attribution {
+    font-size: 12px; text-align: center;
+}
+.attribution a{
+    color: white;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 426px){
+    body{
+        background-image: url(images/bg-mobile.svg);
+        background-size: contain;
+    }
+
+    .principalContainer{
+        width: 400px;
+        height: auto;
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+    }
+
+    .logoContainer{
+        display: flex;
+        justify-content: center;
+    }
+
+    .mockupContainer{
+        width: auto;
+        height: auto;
+    }
+
+    .mockup{
+        width: 400px;
+        height: auto;
+    }
+
+    .contentContainer{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 30px;
+    }
+
+    .informationContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0px 10px 40px 10px;
+        text-align: center;
+    }
+
+    .title{
+        font-size: 30px;
+        margin: 0;
+    }
+}
